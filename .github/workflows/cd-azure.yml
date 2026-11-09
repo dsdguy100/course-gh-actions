@@ -20,7 +20,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }} #testing passes
           password: ${{ secrets.DOCKERHUB_PASS }}       #maybe testing passes
-      - run: ./build-push.sh # can reuse local build scripts for CI/CD
+      - run: bash ./build-push.sh # can reuse local build scripts for CI/CD
         working-directory: api
 #   deploy:
 #     runs-on: ubuntu-latest
